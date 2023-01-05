@@ -13,13 +13,13 @@ export type DisclosureType<StateType = any> = {
 };
 
 type DisclosureProps = {
-  opened: boolean;
+  opened?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
 };
 
 export const useDisclosure = ({
-  opened: initialState,
+  opened: initialState = false,
   onOpen,
   onClose,
 }: DisclosureProps): DisclosureType => {
